@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log-In Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="login.js"></script>
+</head>
+<body class="w-screen h-screen bg-gradient-to-r from-[#09203f] to-[#537895]">
+    <div id="main" class="w-72 h-40 m-auto translate-y-72">
+        <h1 class="text-3xl font-bold pl-4 pt-6 pb-4 text-white text-center">Popup Log-in Box</h1>
+        <button id="login-btn" class="w-20 h-12 bg-green-600 text-white ml-24">LOGIN</button>
+    </div>
+    <div id="form" class="w-2/5 h-3/5 bg-white m-auto rounded-lg relative shadow-2xl transition delay-300 duration-300 ease-in-out">
+        <p class="font-semibold text-4xl text-center pt-8">Login Form</p>
+        <button>
+            <img id="close-btn" src="https://www.freeiconspng.com/thumbs/close-button-png/silver-close-button-png-15.png" alt="" class="h-4 absolute right-4 top-4">
+        </button>
+        <form action="" class="ml-8 mr-8 relative">
+            <p class="text-xl font-extralight mt-8">Email</p>
+            <input type="email" class="w-full h-10 border-2 border-zinc-300 rounded-md pl-2 mt-2 focus:outline-none focus:ring-2 focus:ring-zinc-950 focus:border-transparent" placeholder="Enter email">
+            <p class="text-xl font-extralight mt-4">Password</p>
+            <input type="password" class="w-full h-10 border-2 border-zinc-300 rounded-md pl-2 mt-2 focus:outline-none focus:ring-2 focus:ring-zinc-950 focus:border-transparent" placeholder="Enter password">
+            <input type="checkbox" class="accent-zinc-800 mt-10">
+            <p class="absolute text-lg font-light left-7 bottom-12">Remember me</p>
+            <button class="w-full h-12 bg-zinc-800 hover:bg-zinc-950 text-white rounded-lg font-extralight text-xl relative top-4">Sign in</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById("login-btn").addEventListener("click", function(){
+            document.getElementById("form").style.display = "block";
+        })
+        document.getElementById("close-btn").addEventListener("click", function(){
+            document.getElementById("form").style.display = "none";
+        })
+    </script>
+</body>
+</html>
